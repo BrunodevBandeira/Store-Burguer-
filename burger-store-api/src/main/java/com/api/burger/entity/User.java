@@ -11,12 +11,16 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
+import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Entity
 @Table(name = "tb_user")
 @Data
+@AllArgsConstructor
+@NoArgsConstructor
 public class User {
     // (nullable = false) => indicando que ela não pode ter valores nulos 
     // (unique = true) => todos os valores devem ser únicos
@@ -43,17 +47,25 @@ public class User {
 
     
 
-    @Column(name = "id", nullable = false, unique = true)
-    private LocalDate birthdate;
+    // @Column(name = "birthdate", nullable = false, unique = true)
+    // private LocalDate birthdate;
 
     @Builder
-    public User(Long id, String name, String cpf, String email, LocalDate birthdate) {
+    public User(Long id, String name, String cpf, String email) {
         this.id = id;
         this.name = name;
         this.cpf = cpf;
         this.email = email;
-        this.birthdate = birthdate;
     }
+
+    //     @Builder
+    // public User(Long id, String name, String cpf, String email, LocalDate birthdate) {
+    //     this.id = id;
+    //     this.name = name;
+    //     this.cpf = cpf;
+    //     this.email = email;
+    //     this.birthdate = birthdate;
+    // }
 
     
 

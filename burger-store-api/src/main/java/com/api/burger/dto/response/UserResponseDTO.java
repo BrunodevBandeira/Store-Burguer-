@@ -19,7 +19,7 @@ public class UserResponseDTO {
         this.name = user.getName();
         this.cpf = user.getCpf();
         this.email = user.getEmail();
-        this.birthdate = user.getBirthdate();
+        // this.birthdate = user.getBirthdate();
     }
 
 }

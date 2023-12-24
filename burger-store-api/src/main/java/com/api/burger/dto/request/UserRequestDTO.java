@@ -11,6 +11,6 @@ public class UserRequestDTO {
     private String name;
     private String cpf;
     private String email;
-    private LocalDate birthdate;
+    // private LocalDate birthdate;
 
 }
